@@ -1,0 +1,47 @@
+.Container{
+    background-color: blueviolet;
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+
+}
+
+.titulo{
+    display: flex;
+    background-color: rgb(216, 148, 148);
+    justify-content: center;
+
+}
+
+.imagen{
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+}
+
+.formu{
+    display: flex;
+    background-color: rgb(40, 196, 61);
+    justify-content: center;
+
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+}
+
+.botonEnviar{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    background-color: brown;
+}
