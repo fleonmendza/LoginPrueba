@@ -32,11 +32,13 @@
 .name{
     display: flex;
     flex-direction: column;
+    margin: 5px;
 }
 
 .password{
     display: flex;
     flex-direction: column;
+    margin: 5px;
 }
 
 .botonEnviar{
@@ -44,4 +46,29 @@
     justify-content: center;
     margin: 1rem;
     background-color: brown;
+}
+
+label{
+    margin: 5px;
+}
+
+.formulario_input{
+    width: 100%;
+    border: 3px solid violet;
+    height: 2rem;
+    padding: 0px 5px 0px 10px;
+    
+}
+
+.formulario_input:hover{
+    
+    border: 3px solid rgb(69, 12, 226);
+    
+}
+.formulario_input-name:hover{
+    border: 3px solid red;
+}
+
+.formulario_input-correo:hover{
+    border: 3px solid green;
 }
