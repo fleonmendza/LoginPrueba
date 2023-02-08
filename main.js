@@ -10,9 +10,9 @@ const validarForm = (e) => {
         case "name":
             if(regexMail.test(e.target.value)){
                 console.log("correo");
-                document.getElementsById('name').classList.add('formulario_input-correo:hover');
+                //document.getElementsById('name').classList.add('formulario_input-correo:hover');
             }else if(regexName.test(e.target.value)){
-                document.getElementsById('name').classList.add('formulario_input-name:hover');
+              //  document.getElementsById('name').classList.add('formulario_input-name:hover');
                 console.log("mobre")
             }else{
                 console.log("no vlaido");
