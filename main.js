@@ -9,13 +9,15 @@ const validarForm = (e) => {
     switch(e.target.name){
         case "name":
             if(regexMail.test(e.target.value)){
-                console.log("correo");
-                //document.getElementById('name').classList.add('formulario_input-correo:hover');
+                document.getElementById('name').classList.replace('formulario_input-name', 'formulario_input');
+                document.getElementById('name').classList.replace('formulario_input','formulario_input-correo');
+                console.log("correo"); 
             }else if(regexName.test(e.target.value)){
-              //  document.getElementById('name').classList.add('formulario_input-name:hover');
-                console.log("mobre")
+                document.getElementById('name').classList.replace('formulario_input-correo', 'formulario_input');
+                document.getElementById('name').classList.replace('formulario_input','formulario_input-name');
+                console.log("nombre")
             }else{
-                console.log("no vlaido");
+                console.log("no valido");
             }
         break;
         case "password":
@@ -30,7 +32,8 @@ const validarForm = (e) => {
 
 inputs.forEach((input) =>{
     input.addEventListener('change', validarForm);
-    input.addEventListener('blur', validarForm)
+    input.addEventListener('blur', validarForm);
+    input.addEventListener('keyup', validarForm);
 })
 
 
