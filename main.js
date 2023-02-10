@@ -1,7 +1,7 @@
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
-const regexPass = /^(?=.*[\#\$\.\@\<\>\!\¿\?\&\%\¡])(?=.*[A-Z])(?=.*[a-z])\S{16}$/g;
+const regexPass = /^(?=.*[\#\$\.\@\<\>\!\¿\?\&\%\¡\/])(?=.*[A-Z])(?=.*[a-z])\S{16}$/g;
 const regexMail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/g;
 const regexName = /^[a-zA-Z\s]{1,25}$/g;
 
@@ -12,7 +12,7 @@ const validarForm = (e) => {
                 document.getElementById('name').classList.replace('formulario_input-name', 'formulario_input');
                 document.getElementById('name').classList.replace('formulario_input','formulario_input-correo');
                 console.log("correo"); 
-            }else if(regexName.test(e.target.value)){
+            }if (regexName.test(e.target.value)){
                 document.getElementById('name').classList.replace('formulario_input-correo', 'formulario_input');
                 document.getElementById('name').classList.replace('formulario_input','formulario_input-name');
                 console.log("nombre")
@@ -22,8 +22,12 @@ const validarForm = (e) => {
         break;
         case "password":
             if(regexPass.test(e.target.value)){
+                document.getElementById('password').classList.replace('formulario_input_pass-error', 'formulario_input_pass');
+                document.getElementById('password').classList.replace('formulario_input_pass','formulario_input_pass-correcto');
                 console.log("pass corecta");
             }else{
+                document.getElementById('password').classList.replace('formulario_input_pass-correcto', 'formulario_input_pass');
+                document.getElementById('password').classList.replace('formulario_input_pass','formulario_input_pass-error');
                 console.log("pass mala");
             }
         break;
@@ -31,9 +35,10 @@ const validarForm = (e) => {
 }
 
 inputs.forEach((input) =>{
-    input.addEventListener('change', validarForm);
-    input.addEventListener('blur', validarForm);
-    input.addEventListener('keyup', validarForm);
+   //input.addEventListener('change', validarForm);
+    //input.addEventListener('blur', validarForm);
+   // input.addEventListener('keyup', validarForm);
+   input.addEventListener('input', validarForm);
 })
 
 

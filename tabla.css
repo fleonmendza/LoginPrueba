@@ -2,6 +2,7 @@
     display: grid;
     background-color: rgb(195, 195, 196);
     grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    font-family: monospace;
 }
 .encabezado{
     display: flex;
