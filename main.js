@@ -48,8 +48,11 @@ formulario.addEventListener("submit", e=>{
     if(user && pass){
         window.location.href = "http://127.0.0.1:5501/tabla.html";
         console.log("validacion correcta")
+    }else if(user === false){
+        alert("Usuario o Correo incorrecto");
+        console.log("validacion mala")
     }else{
-        alert("datos incorrectos");
+        alert("Contraseña no valida");
         console.log("validacion mala")
     }
 })
